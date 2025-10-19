@@ -1,0 +1,8 @@
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+WORKDIR /src
+COPY ["MobileAPI.Test/MobileAPI.Test.csproj", "MobileAPI.Test/"]
+COPY ["MobileAPI/MobileAPI.csproj", "MobileAPI/"]
+RUN dotnet restore "MobileAPI.Test/MobileAPI.Test.csproj"
+COPY . .
+WORKDIR "/src/MobileAPI.Test"
+RUN dotnet test
