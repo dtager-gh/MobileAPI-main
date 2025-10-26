@@ -7,7 +7,7 @@ pipeline {
 
     parameters {
         string(name: 'GIT_BRANCH', defaultValue: 'main', description: 'Branch to build')
-        string(name: 'GIT_REPO', defaultValue: 'git@github.com:WVUP/MobileAPI.git', description: 'Git repo URL')
+        string(name: 'GIT_REPO', defaultValue: 'git@github.com:dtager-gh/MobileAPI-main.git', description: 'Git repo URL')
     }
 
     stages {
