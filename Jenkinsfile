@@ -36,7 +36,7 @@ pipeline {
             steps {
                 git branch: "${params.GIT_BRANCH}", 
                 url: "${params.GIT_REPO}",
-                credentialsId: '0c5f1a4f-794a-41dd-b0c1-50aaeaf49235'
+                credentialsId: 'f4689721-53d2-4d0c-991e-d8f235013bd1'
             }
         }
 
