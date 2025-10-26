@@ -3,6 +3,7 @@ pipeline {
 
     environment {
         IMAGE_BASE = "mobileapi"
+		GIT_SSH_COMMAND = "ssh -o StrictHostKeyChecking=no"
     }
 
     parameters {
