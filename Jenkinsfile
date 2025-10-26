@@ -3,7 +3,6 @@ pipeline {
 
     environment {
         IMAGE_BASE = "mobileapi"
-		GIT_SSH_COMMAND = "ssh -o StrictHostKeyChecking=no"
     }
 
     parameters {
@@ -35,11 +34,9 @@ pipeline {
 
         stage('Checkout Source') {
             steps {
-				sshagent(['0c5f1a4f-794a-41dd-b0c1-50aaeaf49235']) {
                 git branch: "${params.GIT_BRANCH}", 
                 url: "${params.GIT_REPO}",
-                //credentialsId: '0c5f1a4f-794a-41dd-b0c1-50aaeaf49235'
-				}	
+                credentialsId: '0c5f1a4f-794a-41dd-b0c1-50aaeaf49235'
             }
         }
 
